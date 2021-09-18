@@ -11,3 +11,4 @@ Se tiene como base la metodología Scrum, contando con los siguientes roles para
   5. **Scrum Master** - Kevin Bohorquez.
 
 👓 Cada semana se estarán cambiando los roles, de forma descendente.
+cambio 1
