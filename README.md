@@ -1,5 +1,5 @@
-# ProjectX
-team work with MinTic third cicle
+# ProjectX SD Ascension
+Team work with MinTic third cicle
 
 👨🏽‍💻 Trabajo requerido para el desarrollo del ciclo 3 de la escuela de formación MinTic 2021.
 
