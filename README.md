@@ -7,7 +7,7 @@ Se tiene como base la metodología Scrum, contando con los siguientes roles para
   1. **Desarrollador** - Estyben Caicedo
   2. **Analista** - Daniel Rey
   3. **Product Owner** - Daniel Guarí
-  4. **Administrador de BD** - Camilo Zuñiga
+  4. **Administrador de BD** - Camilo Zuñiga Vergara
   5. **Scrum Master** - Kevin Bohorquez
 
 👓 Cada semana se estarán cambiando los roles, de forma descendente.
