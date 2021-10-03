@@ -1,0 +1,186 @@
+/* Variables*/
+:root{
+    --clr-primary-1: hsl(205, 86%, 17%);
+    --clr-primary-2: hsl(205, 77%, 27%);
+    --clr-primary-3: hsl(205, 72%, 37%);
+    --clr-primary-4: hsl(205, 83%, 53%);
+    --clr-grey-1: hsl(209, 61%, 16%);
+    --clr-grey-2: hsl(211, 39%, 23%);
+    --clr-grey-3: hsl(209, 34%, 30%);
+    --clr-grey-4: hsl(209, 28%, 39%);
+    --clr-grey-5: hsl(210, 22%, 49%);
+    --clr-grey-6: hsl(209, 23%, 60%);
+    --clr-grey-7: hsl(211, 27%, 70%);
+    --clr-grey-8: hsl(210, 31%, 80%);
+    --clr-grey-9: hsl(212, 33%, 89%);
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+}
+
+header {
+    width: 100%;
+    height: 15vh;
+    background: linear-gradient(to top,var(--clr-grey-3)0%,var(--clr-grey-5)100%);
+    min-width: 500px;
+}
+
+.nav-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 12vh;
+    position: relative;
+    top: 10%;
+
+}
+.figure-img {
+    width: auto;
+    padding: 0 0.5rem;
+    margin-left: 0.5rem;
+    font-size: 2.2rem;
+    font-family: 'Roboto', sans-serif;
+    color: var(--clr-grey-7);
+}
+.figure-img:hover {
+    color: var(--clr-primary-2);
+}
+.head-items {
+    list-style: none;
+    display: flex;
+}
+.head_items {
+    text-decoration: none;
+    padding: 1rem 0.5rem;
+    background: linear-gradient(to bottom,var(--clr-primary-1)0%,var(--clr-primary-2)100%);
+    margin: 0.5rem;
+    border: none;
+    border-radius: 1.5rem;
+    font-size: 1.6rem;
+    color: whitesmoke;
+}
+.head_items:hover{
+    padding: 8px 20px;
+    transition: all 0.3s ease-out;
+    background: var(--clr-grey-9);
+    color: var(--clr-primary-1);
+    transition: 250ms;
+}
+.head_items:active{
+    background-image: linear-gradient(
+        to bottom,
+        var(--clr-primary-2) 0%,
+        var(--clr-primary-1) 100%
+    );
+    border-radius: 4px;
+    transition: all 0.2s ease-out;
+    color: firebrick;
+}
+main {
+    min-width: 500px;
+}
+.main-container{
+    height: auto;
+    background: linear-gradient(to top,var(--clr-primary-1)0%,var(--clr-primary-3)100%);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main-aside {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.d1, .d2, .d3, .d4, .d5 {
+    width: 100%;
+    height: 150px;
+    display: flex;
+}
+.d1 {
+    background: linear-gradient(to bottom,var(--clr-grey-1)0%,var(--clr-grey-3)100%);
+}
+.d2 {
+    background: linear-gradient(to bottom,var(--clr-grey-2)0%,var(--clr-grey-5)100%);
+}
+.d3 {
+    background: linear-gradient(to bottom,var(--clr-grey-3)0%,var(--clr-grey-6)100%);
+}
+.d4 {
+    background: linear-gradient(to bottom,var(--clr-grey-4)0%,var(--clr-grey-7)100%);
+}
+.d5 {
+    background: linear-gradient(to bottom,var(--clr-grey-6)0%,var(--clr-grey-8)100%);
+}
+.main-section{
+    min-height: 200px;
+    background: linear-gradient(to bottom,var(--clr-primary-1)0%,var(--clr-primary-4)100%);
+    font-size: 1.2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.pict-aside {
+    width: auto;
+    display: flex;
+    align-items: center;
+    margin-left: 7%;
+}
+.imagen-aside {
+    width: auto;
+    height: 90%;
+    border-radius: 10rem;
+}
+.sub-divs {
+    display: flex;
+    margin-left: 11%;
+    flex-direction: column;
+    justify-content: center;
+}
+.main-link {
+    text-decoration: none;
+    list-style: none;
+}
+.main-link:hover{
+    color: deepskyblue;
+}
+.main-link:active{
+    color: firebrick;
+}
+
+
+
+h3 {
+    font-size: 1.8rem;
+    align-items: center;
+    display: flex;
+    color: whitesmoke;
+}
+p {
+    font-size: 1.4rem;
+    color: white;
+}
+
+footer {
+    width: 100%;
+    height: 180px;
+    background: linear-gradient(to top,var(--clr-primary-1)0%,var(--clr-primary-2) 100%);
+    min-width: 500px;
+}
+.p-footer{
+    color: whitesmoke;
+    font-size: 1.7rem;
+}
+.figure-img1 {
+    width: auto;
+    padding: 0 0.5rem;
+    margin-left: 0.5rem;
+    font-size: 2.2rem;
+    font-family: 'Roboto', sans-serif;
+    color: var(--clr-grey-7);
+}
