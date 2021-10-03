@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="una pagina de ventas">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index,follow">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./tablet.css" media="screen and (min-width: 600px)">
+    <link rel="stylesheet" href="./desktop.css" media="screen and (min-width: 800px)">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    >
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Project seller</title>
+</head>
+<body>
+    <header>
+        
+        <nav class="nav-container">
+            <h1 class="figure-img"> SD ascension<i class="fab fa-react"></i> </h1>
+            <ul class="head-items">
+                <li><a class="head_items" href="">home</a></li>
+                <li><a class="head_items" href="">Product info</a></li>
+                <li><a class="head_items" href="">Log out</a></li>
+                <li><a class="head_items" href="">Sell info</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main-container">
+        <aside class="main-aside">
+            <div class="d1">
+                <figure class="pict-aside">
+                    <img class="imagen-aside" src="./imgs/styben.jpeg" alt="foto representante">
+                </figure>
+                <div class="sub-divs">
+                    <a class="main-link" href=""><h3>Estyben Caicedo</h3>
+                        <p> Administradores </p></a>
+                    
+                </div>
+            </div>
+            <div class="d2"> 
+                <figure class="pict-aside">
+                    <img class="imagen-aside" src="./imgs/Daniel.jpeg" alt="foto representante">
+                </figure>
+                <div class="sub-divs">
+                    <a class="main-link" href=""><h3>Daniel Rey</h3>
+                        <p> Administrador </p></a>
+                    
+                </div>
+            </div>
+            <div class="d3">
+                <figure class="pict-aside">
+                    <img class="imagen-aside" src="./imgs/00 foto.jpg" alt="foto representante">
+                </figure>
+                <div class="sub-divs">
+                    <a class="main-link" href=""><h3>Daniel Guarín</h3>
+                        <p> Administrador </p></a>
+                    
+                </div>
+            </div>
+            <div class="d4">
+                <figure class="pict-aside">
+                    <img class="imagen-aside" src="./imgs/Camilo.jpeg" alt="foto representante">
+                </figure>
+                <div class="sub-divs">
+                    <a class="main-link" href=""><h3>Camilo Zuñiga</h3>
+                        <p> Administrador </p></a>
+                    
+                </div>
+            </div>
+            <div class="d5">
+                <figure class="pict-aside">
+                    <img class="imagen-aside" src="./imgs/kevin2.jpeg" alt="foto representante">
+                </figure>
+                <div class="sub-divs">
+                    <a class="main-link" href=""><h3>Kevin Bohorquez</h3>
+                        <p> Administrador </p></a>
+                </div>
+            </div>
+        </aside>
+        <section class="main-section">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores adipisci harum vitae, tenetur nobis earum vel quam quibusdam, fuga nemo assumenda dolores corporis sed eligendi sequi, consequuntur in exercitationem molestiae!</p>
+        </section>
+    </main>
+    <footer>
+        <h1 class="figure-img1"> SD ascension<i class="fab fa-react"></i> </h1>
+        <p class="p-footer">rights reserved 😎</p>
+    </footer>
+</body>
+</html>
