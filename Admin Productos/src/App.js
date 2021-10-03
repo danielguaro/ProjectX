@@ -1,5 +1,5 @@
 import React from 'react'
-import ProductReg from './Components/Product Reg/ProductApp'
+import ProductReg from './Components/ProductApp'
 
 function App() {
   return (
