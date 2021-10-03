@@ -1,0 +1,169 @@
+import React from 'react'
+import './index.css'
+import data from './data'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import {
+  Container,
+  Button,
+  Modal,
+  ModalHeader,
+  ModalBody,
+  FormGroup,
+  ModalFooter,
+} from 'reactstrap'
+
+class Products extends React.Component {
+  state = {
+    data: data,
+    form: {
+      id: '',
+      productName: '',
+      description: '',
+      unitValue: '',
+      state: '',
+    },
+  }
+
+  showInsertModal = () => {
+    this.setState({
+      modalInsert: true,
+    })
+  }
+
+  closeInsertModal = () => {
+    this.setState({ modalInsert: false })
+  }
+
+  insert = () => {
+    var newValue = { ...this.state.form }
+    newValue.id = this.state.data.length + 1
+    var list = this.state.data
+    list.push(newValue)
+    this.setState({ modalInsert: false, data: list })
+  }
+
+  handleChange = (e) => {
+    this.setState({
+      form: {
+        ...this.state.form,
+        [e.target.name]: e.target.value,
+      },
+    })
+  }
+
+  render() {
+    return (
+      <>
+        <div className='main__container'>
+          <Container className='container'>
+            <h1 className='main-title'>Products</h1>
+            <table className='main-table'>
+              <thead className='table_head'>
+                <tr className='table_button'>
+                  <Button
+                    color='success'
+                    onClick={() => this.showInsertModal()}
+                  >
+                    Insert Product
+                  </Button>
+                </tr>
+                <tr>
+                  <th id='table_id'>Id</th>
+                  <th>Product Name</th>
+                  <th>Description</th>
+                  <th>Unit Value</th>
+                  <th>State</th>
+                </tr>
+              </thead>
+              <tbody className='table_body'>
+                {this.state.data.map((dato) => (
+                  <tr key={dato.id}>
+                    <td id='row_id'>{dato.id}</td>
+                    <td>{dato.productName}</td>
+                    <td>{dato.description}</td>
+                    <td>{dato.unitValue}</td>
+                    <td>{dato.state}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </Container>
+        </div>
+
+        <Modal isOpen={this.state.modalInsert}>
+          <ModalHeader>
+            <div>
+              <h3>Insert Product</h3>
+            </div>
+          </ModalHeader>
+
+          <ModalBody>
+            <FormGroup>
+              <label>Id:</label>
+
+              <input
+                className='form-control'
+                readOnly
+                type='text'
+                value={this.state.data.length + 1}
+              />
+            </FormGroup>
+
+            <FormGroup>
+              <label>Product:</label>
+              <input
+                className='form-control'
+                name='productName'
+                type='text'
+                onChange={this.handleChange}
+              />
+            </FormGroup>
+
+            <FormGroup>
+              <label>Description:</label>
+              <input
+                className='form-control'
+                name='description'
+                type='text'
+                onChange={this.handleChange}
+              />
+            </FormGroup>
+
+            <FormGroup>
+              <label>Unit Value:</label>
+              <input
+                className='form-control'
+                name='unitValue'
+                type='text'
+                onChange={this.handleChange}
+              />
+            </FormGroup>
+
+            <FormGroup>
+              <label>State:</label>
+              <input
+                className='form-control'
+                name='state'
+                type='text'
+                onChange={this.handleChange}
+              />
+            </FormGroup>
+          </ModalBody>
+
+          <ModalFooter>
+            <Button color='primary' onClick={() => this.insert()}>
+              Insert
+            </Button>
+            <Button
+              className='btn btn-danger'
+              onClick={() => this.closeInsertModal()}
+            >
+              Cancel
+            </Button>
+          </ModalFooter>
+        </Modal>
+      </>
+    )
+  }
+}
+export default Products
