@@ -1,0 +1,42 @@
+.main-container {
+    height: 70vh;
+}
+
+.main-aside {
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.d1, .d2, .d3, .d4, .d5 {
+    width: 100%;
+    height: 13vh;
+    border-radius: 0.5rem;
+    margin: 0.5% 1%;
+}
+.d1 {
+    order: 1;
+    width: 100%;
+}
+.d2 {
+    order: 2;
+    width: 100%;
+}
+.d3 {
+    order: 3;
+    width: 100%;
+}
+.d4 {
+    order: 4;
+    width: 100%;
+}
+.d5 {
+    order: 5;
+    width: 100%;
+}
+.main-section{
+    width: 58%;
+}
+footer {
+    height: 15vh;
+}
