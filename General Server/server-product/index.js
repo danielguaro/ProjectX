@@ -23,7 +23,7 @@ app.get('/product', (req, res) => {
   })
 })
 
-app.post('/add', (req, res) => {
+app.post('/product', (req, res) => {
   const productName = req.body.productName
   const description = req.body.description
   const unitValue = req.body.unitValue
@@ -41,7 +41,7 @@ app.post('/add', (req, res) => {
   )
 })
 
-app.put('/update', (req, res) => {
+app.put('/product', (req, res) => {
   const id = req.body.id
   const productName = req.body.productName
   const description = req.body.description
@@ -60,7 +60,7 @@ app.put('/update', (req, res) => {
   )
 })
 
-app.delete('/delete/:id', (req, res) => {
+app.delete('/product/:id', (req, res) => {
   const id = req.params.id
   db.query('DELETE FROM product WHERE id = ?', id, (err, result) => {
     if (err) {

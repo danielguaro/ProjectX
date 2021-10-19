@@ -25,8 +25,8 @@ export const MenuItems = [
     cName: 'nav-links',
   },
   {
-    title: 'Log Out',
-    url: '/',
+    title: 'Log In',
+    url: '/login',
     cName: 'nav-links-mobile',
   },
 ]

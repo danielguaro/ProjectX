@@ -24,7 +24,7 @@ const Users = () => {
   const [userList, setUsersList] = useState([])
 
   const insertUsers = () => {
-    Axios.post('http://localhost:3012/update', {
+    Axios.post('http://localhost:3002/user', {
       name: name,
       rol: rol,
       userState: userState,
@@ -42,7 +42,7 @@ const Users = () => {
   }
 
   const modifyUsers = () => {
-    Axios.put('http://localhost:3012/modify', {
+    Axios.put('http://localhost:3002/user', {
       name: editName,
       rol: editRol,
       userState: editUserState,
@@ -65,7 +65,7 @@ const Users = () => {
   }
 
   const deleteUsers = () => {
-    Axios.delete(`http://localhost:3012/delete/${id}`).then((res) => {
+    Axios.delete(`http://localhost:3002/user/${id}`).then((res) => {
       setUsersList(
         userList.filter((val) => {
           return val.id != id
@@ -77,7 +77,7 @@ const Users = () => {
   }
 
   const getUsers = () => {
-    Axios.get('http://localhost:3012/user').then((res) => {
+    Axios.get('http://localhost:3002/user').then((res) => {
       setUsersList(res.data)
     })
   }

@@ -24,7 +24,7 @@ const Sells = () => {
   const [sellList, setSellList] = useState([])
 
   const getSells = () => {
-    Axios.get('http://localhost:3011/sells').then((res) => {
+    Axios.get('http://localhost:3002/sell').then((res) => {
       setSellList(res.data)
     })
   }
@@ -46,7 +46,7 @@ const Sells = () => {
   }
 
   const modifySell = () => {
-    Axios.put('http://localhost:3011/modify', {
+    Axios.put('http://localhost:3002/sell', {
       totalValue: editTotalValue,
       idProduct: editIdProduct,
       quantity: editQuantity,
@@ -79,7 +79,7 @@ const Sells = () => {
   }
 
   const deleteSell = () => {
-    Axios.delete(`http://localhost:3011/delete/${id}`).then((res) => {
+    Axios.delete(`http://localhost:3002/sell/${id}`).then((res) => {
       setSellList(
         sellList.filter((val) => {
           return val.id != id

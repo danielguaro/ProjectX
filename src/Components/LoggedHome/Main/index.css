@@ -145,16 +145,16 @@
     transform: scale(1.1, 1.1);
   }
 
-.main_section button:active {
-  background-image: linear-gradient(
-    to bottom,
-    var(--clr-grey-2) 0%,
-    var(--clr-grey-1) 100%
-  );
-  border-radius:20px;
-  transition: all 0.2s ease-out;
-  color: var(--clr-grey-7);
-}
+  .main_section button:active {
+    background-image: linear-gradient(
+      to bottom,
+      var(--clr-grey-2) 0%,
+      var(--clr-grey-1) 100%
+    );
+    border-radius: 20px;
+    transition: all 0.2s ease-out;
+    color: var(--clr-grey-7);
+  }
 
   footer {
     bottom: 0;

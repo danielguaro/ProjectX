@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, useState } from 'react'
 import { MenuItems } from './MenuItems'
 import { AiOutlineMenu } from 'react-icons/ai'
 import { FaReact } from 'react-icons/fa'
@@ -6,28 +6,50 @@ import { VscChromeClose } from 'react-icons/vsc'
 import './Navbar.css'
 import { Button } from './Button'
 import { useAuth0 } from '@auth0/auth0-react'
+import { useHistory } from 'react-router-dom'
+import Axios from 'axios'
 
-const LogoutBtn=()=>{
+const LogBtn = () => {
+  const [username, setUsername] = useState('')
+  const [password, setPassword] = useState('')
+  const [loginStatus, setLoginStatus] = useState(false)
+  Axios.defaults.withCredentials = true
+  const history = useHistory()
   const { logout } = useAuth0()
+
+  const login = () => {
+    Axios.post('http://localhost:3010/login', {
+      username: username,
+      password: password,
+    }).then((response) => {
+      if (!response.data.auth) {
+        setLoginStatus(false)
+      } else {
+        localStorage.setItem('token', response.data.token)
+        setLoginStatus(true)
+      }
+    })
+  }
+
+  const handleLogin = () => {
+    history.push('/login')
+  }
+
   return (
-    <Button className='nav-btn'>
-      <a
-        href='/'
-        style={{
-          textDecoration: 'none',
-          color: 'hsl(210, 22%, 49%)',
-        }}
-        onClick={() => logout({ returnTo: window.location.origin })}
-      >
-        Log Out
-      </a>
-    </Button>
+    <>
+      {loginStatus ? (
+        <Button className='nav-btn' onClick={handleLogin}>
+          Log In
+        </Button>
+      ) : (
+        <Button>Log Out</Button>
+      )}
+    </>
   )
 }
 
 class Navbar extends Component {
   state = { clicked: false }
-
 
   handleClick = () => {
     this.setState({ clicked: !this.state.clicked })
@@ -60,7 +82,7 @@ class Navbar extends Component {
             )
           })}
         </ul>
-        <LogoutBtn />
+        <LogBtn />
       </nav>
     )
   }

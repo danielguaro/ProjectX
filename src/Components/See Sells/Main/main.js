@@ -21,13 +21,13 @@ const Sells = () => {
   const [modalState, setModalState] = useState(false)
 
   const getSells = () => {
-    Axios.get('http://localhost:3011/sells').then((res) => {
+    Axios.get('http://localhost:3002/sell').then((res) => {
       setSellList(res.data)
     })
   }
 
   const addSells = () => {
-    Axios.post('http://localhost:3011/add', {
+    Axios.post('http://localhost:3002/sell', {
       totalValue: totalValue,
       idProduct: idProduct,
       quantity: quantity,

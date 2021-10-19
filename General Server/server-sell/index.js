@@ -14,7 +14,7 @@ const db = mysql.createConnection({
   database: 'sdascension',
 })
 
-app.get('/sells', (req, res) => {
+app.get('/sell', (req, res) => {
   db.query('SELECT * FROM sells', (err, result) => {
     if (err) {
       console.log(err)
@@ -24,7 +24,7 @@ app.get('/sells', (req, res) => {
   })
 })
 
-app.post('/add', (req, res) => {
+app.post('/sell', (req, res) => {
   const totalValue = req.body.totalValue
   const idProduct = req.body.idProduct
   const quantity = req.body.quantity
@@ -55,7 +55,7 @@ app.post('/add', (req, res) => {
   )
 })
 
-app.put('/modify', (req, res) => {
+app.put('/sell', (req, res) => {
   const id = req.body.id
   const totalValue = req.body.totalValue
   const idProduct = req.body.idProduct
@@ -88,7 +88,7 @@ app.put('/modify', (req, res) => {
   )
 })
 
-app.delete('/delete/:id', (req, res) => {
+app.delete('/sell/:id', (req, res) => {
   const id = req.params.id
   db.query('DELETE FROM sells WHERE id = ?', id, (err, result) => {
     if (err) {

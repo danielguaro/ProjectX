@@ -1,33 +1,29 @@
 import Fondo from '../Images/Fondo.jpg'
-import './index.css'
+import { useHistory } from 'react-router-dom'
+import { Button } from '../../Navbar/Button'
 
 export const Main = () => {
-    return (
-      <>
-        <main>
-          <div class='main_section'>
-            <h1>SD Ascension</h1>
-            <div class='underline'></div>
-            <h2>
-              <p>Welcome to the main page.</p>
-              <hr></hr>
-              <p>To join in the system press the next button</p>
-            </h2>
-            <a>
-              <button>
-                <a
-                  href='/seeProduct'
-                  style={{
-                    textDecoration: 'none',
-                    color: 'hsl(210, 22%, 49%)',
-                  }}
-                >
-                  Products
-                </a>
-              </button>
-            </a>
-          </div>
-        </main>
-      </>
-    )
+  const history = useHistory()
+
+  const handleLogin = () => {
+    history.push('/login')
+  }
+  return (
+    <>
+      <main>
+        <div class='main_section'>
+          <h1 style={{fontFamily:'serif'}}>SD Ascension</h1>
+          <div class='underline'></div>
+          <h2 style={{fontSize:25}}>
+            <p>Welcome to the main page.</p>
+            <hr></hr>
+            <p>To join in the system press the next button</p>
+          </h2> 
+            <Button className='nav-btn' onClick={handleLogin}>
+              Log In
+            </Button>
+        </div>
+      </main>
+    </>
+  )
 }
