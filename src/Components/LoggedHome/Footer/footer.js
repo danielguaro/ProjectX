@@ -4,7 +4,7 @@ export const Footer = () => {
   return (
     <footer>
       <div class='social_icons'>
-        <h1 className='footer-logo'>
+        <h1 className='footer-logo' style={{ fontSize: 30 }}>
           SD Ascension
           <i id='logo-icon'>
             <FaReact />

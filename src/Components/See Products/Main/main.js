@@ -16,7 +16,7 @@ const Products = () => {
   const [modalState, setModalState] = useState(false)
 
   const addProduct = () => {
-    Axios.post('http://localhost:3010/add', {
+    Axios.post('http://localhost:3002/product', {
       productName: productName,
       description: description,
       unitValue: unitValue,
@@ -37,7 +37,7 @@ const Products = () => {
   }
 
   const getProducts = () => {
-    Axios.get('http://localhost:3010/product').then((res) => {
+    Axios.get('http://localhost:3002/product').then((res) => {
       setProductList(res.data)
     })
   }
@@ -57,7 +57,12 @@ const Products = () => {
           <h1>Products Information</h1>
         </center>
         <div style={{ height: 500, width: '100%' }}>
-          <Button color='primary' onClick={getProducts} className='main-btn'>
+          <Button
+            color='primary'
+            onClick={getProducts}
+            className='main-btn'
+            style={{ display: 'table-column', padding: 6 }}
+          >
             Show Products
           </Button>
           <Button color='success' onClick={openModal} className='main-btn'>

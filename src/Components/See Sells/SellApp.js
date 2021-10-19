@@ -1,7 +1,6 @@
 import React from 'react'
 import Sells from './Main/main'
 
-
 function Sell() {
   return (
     <div>

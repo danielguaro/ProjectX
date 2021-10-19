@@ -48,9 +48,9 @@
 
 .main-btn {
   position: relative;
+  display: flex;
   top: 10%;
   left: 5%;
-  width: 130px;
 }
 
 .main_container h1 {

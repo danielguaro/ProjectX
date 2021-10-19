@@ -26,7 +26,7 @@ app.get('/user', (req, res) => {
 })
 
 //Para insertar usuario
-app.post('/update', (req, res) => {
+app.post('/user', (req, res) => {
   // Realizar pedidos al Frontend
   const name = req.body.name
   const rol = req.body.rol
@@ -45,7 +45,7 @@ app.post('/update', (req, res) => {
   )
 })
 
-app.put('/modify', (req, res) => {
+app.put('/user', (req, res) => {
   const id = req.body.id
   const name = req.body.name
   const rol = req.body.rol
@@ -63,7 +63,7 @@ app.put('/modify', (req, res) => {
   )
 })
 
-app.delete('/delete/:id', (req, res) => {
+app.delete('/user/:id', (req, res) => {
   const id = req.params.id
   db.query('DELETE FROM users WHERE id = ?', id, (err, result) => {
     if (err) {
