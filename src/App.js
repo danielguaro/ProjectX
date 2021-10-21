@@ -17,8 +17,10 @@ import ProductAdmin from './Components/Product Admin/ProductApp'
 import SellAdmin from './Components/Sell Admin/SellAdmin'
 import Navbar from './Components/Navbar/Navbar'
 import PageNotFound from './Components/PageNotFound'
-import HomeApp from './Components/LoggedHome/HomeApp'
+import HomeApp from './Components/Home/HomeApp'
 import Loading from './Components/loading'
+import About from './Components/Others/About'
+import Contact from './Components/Others/Contact'
 
 function App() {
   const { isAuthenticated } = useAuth0()
@@ -30,6 +32,8 @@ function App() {
         <Navbar />
         <Switch>
           <Route exact path='/' component={HomeApp} />
+          <Route exact path='/about' component={About} />
+          <Route exact path='/contact' component={Contact} />
           {isLoading && <Loading />}
           {isAuthenticated && (
             <>

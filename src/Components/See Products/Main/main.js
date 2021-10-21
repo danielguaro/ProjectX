@@ -17,7 +17,7 @@ const Products = () => {
   const [modalState, setModalState] = useState(false)
 
   const addProduct = () => {
-    Axios.post('http://localhost:3002/product', {
+    Axios.post('http://localhost:3003/product', {
       productName: productName,
       description: description,
       unitValue: unitValue,
@@ -38,7 +38,7 @@ const Products = () => {
   }
 
   const getProducts = () => {
-    Axios.get('http://localhost:3002/product').then((res) => {
+    Axios.get('http://localhost:3003/product').then((res) => {
       setProductList(res.data)
     })
   }
