@@ -21,7 +21,7 @@ const Products = () => {
   const [id, setId] = useState(0)
 
   const modifyProduct = () => {
-    Axios.put('http://localhost:3002/product', {
+    Axios.put('http://localhost:3003/product', {
       productName: editProductName,
       description: editDescription,
       unitValue: editUnitValue,
@@ -46,7 +46,7 @@ const Products = () => {
   }
 
   const deleteProduct = () => {
-    Axios.delete(`http://localhost:3002/product/${id}`).then((res) => {
+    Axios.delete(`http://localhost:3003/product/${id}`).then((res) => {
       setProductList(
         productList.filter((val) => {
           return val.id != id
@@ -57,7 +57,7 @@ const Products = () => {
   }
 
   const getProducts = () => {
-    Axios.get('http://localhost:3002/product').then((res) => {
+    Axios.get('http://localhost:3003/product').then((res) => {
       setProductList(res.data)
     })
   }

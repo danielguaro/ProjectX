@@ -24,9 +24,12 @@ const PageNotFound = () => {
       <p
         style={{
           position: 'absolute',
-          width: '100%',
+          display: 'flex',
+          width: '70vw',
+          left: 20,
           top: 60,
-          height: '100%',
+         
+          height: 100,
           textAlign: 'center',
           fontSize: 20,
           color: 'black',
@@ -36,10 +39,10 @@ const PageNotFound = () => {
         home page, press
         <button
           style={{
-            position: 'relative',
+            position: 'absolute',
+            display: 'flex',
             width: '100px',
-            top: 5,
-            left: 5,
+            top: 60,
             height: '40px',
             textAlign: 'center',
             fontSize: 20,
