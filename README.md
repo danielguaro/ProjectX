@@ -1,3 +1,7 @@
+### Project X
+# npm install in server and in the react app to install all the modules from both
+# project done by group sd ascension
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
