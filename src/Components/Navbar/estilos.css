@@ -21,7 +21,13 @@
 }
 
 body {
-  background-color: var(--clr-grey-4);
+   background: url('https://interacso.com/blog/wp-content/uploads/2019/05/reactluminoso.png') no-repeat center center fixed;
+   background-size: cover;
+
+}
+
+.login-main{
+  background: none;
 }
 
 
@@ -31,6 +37,7 @@ body {
   height: 500px;
   margin: auto;
   position: relative;
+
 }
 
 /*Formularios*/
@@ -43,7 +50,7 @@ body {
   position: relative;
   justify-content: center;
   text-align: center;
-  top: 200px;
+  top: 250px;
   left: 200px;
 }
 
@@ -96,6 +103,14 @@ body {
   opacity: 1;
 }
 
+.form-btn:hover{
+  background: var(--clr-primary-1);
+}
+
+.form-btn:active{
+  background: linear-gradient(to bottom, var(--clr-primary-2) 0%, var(--clr-primary-1)100%);
+}
+
 @media screen and (max-width: 850px) {
 
   .form-btn {
@@ -116,7 +131,7 @@ body {
   /*Formularios*/
 
   .contenedor__login-register {
-    top: -10px;
+    top: 20px;
     left: -5px;
     margin: auto;
   }

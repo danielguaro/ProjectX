@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import { Button } from 'reactstrap'
 import headers from './headers'
 import Axios from 'axios'
+import { withRouter } from 'react-router'
 
 const Products = () => {
   const [productName, setProductName] = useState('')
@@ -135,4 +136,4 @@ const Products = () => {
     </>
   )
 }
-export default Products
+export default withRouter(Products)

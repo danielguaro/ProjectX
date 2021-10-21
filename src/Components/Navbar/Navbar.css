@@ -62,8 +62,7 @@
 }
 
 .nav-menu {
-  display: grid;
-  grid-template-columns: repeat(5, auto);
+  display: flex;
   gap: 10px;
   list-style: none;
   text-align: center;
@@ -216,7 +215,8 @@
   }
 
   Button {
-    display: none;
+    left: 38%;
+    margin-right: -58%;
     font-size: 20px;
   }
 }
