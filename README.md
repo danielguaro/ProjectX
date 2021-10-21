@@ -1,6 +1,6 @@
-### Project X
-# npm install in server and in the react app to install all the modules from both
-# project done by group sd ascension
+# Project X
+## npm install in server and in the react app to install all the modules from both
+## project done by group sd ascension
 
 # Getting Started with Create React App
 
