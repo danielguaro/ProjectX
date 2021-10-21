@@ -17,11 +17,9 @@ export const Main = () => {
           <h2 style={{fontSize:25}}>
             <p>Welcome to the main page.</p>
             <hr></hr>
-            <p>To join in the system press the next button</p>
+            <p>Our team is SD Ascension</p>
           </h2> 
-            <Button className='nav-btn' onClick={handleLogin}>
-              Log In
-            </Button>
+
         </div>
       </main>
     </>

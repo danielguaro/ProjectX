@@ -43,12 +43,15 @@
 }
 
 .button--primary {
+  position: relative;
   background-image: linear-gradient(
     to bottom,
     var(--clr-primary-1) 0%,
     var(--clr-primary-2) 100%
   );
-  margin-right: 10px;
+  top: 10px;
+  width: 100px;
+  height: 40px;
   border: none;
 }
 

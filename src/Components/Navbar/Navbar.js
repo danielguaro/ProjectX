@@ -1,48 +1,78 @@
 import React, { Component, useState } from 'react'
 import { MenuItems } from './MenuItems'
+import { MainItems } from './MainItems'
+import { MenuItems2 } from './MenuItems2'
 import { AiOutlineMenu } from 'react-icons/ai'
 import { FaReact } from 'react-icons/fa'
 import { VscChromeClose } from 'react-icons/vsc'
 import './Navbar.css'
 import { Button } from './Button'
+import './estilos.css'
 import { useAuth0 } from '@auth0/auth0-react'
-import { useHistory } from 'react-router-dom'
-import Axios from 'axios'
 
-const LogBtn = () => {
-  const [username, setUsername] = useState('')
-  const [password, setPassword] = useState('')
-  const [loginStatus, setLoginStatus] = useState(false)
-  Axios.defaults.withCredentials = true
-  const history = useHistory()
+export const Log = () => {
+  const { loginWithRedirect, isAuthenticated } = useAuth0()
   const { logout } = useAuth0()
-
-  const login = () => {
-    Axios.post('http://localhost:3010/login', {
-      username: username,
-      password: password,
-    }).then((response) => {
-      if (!response.data.auth) {
-        setLoginStatus(false)
-      } else {
-        localStorage.setItem('token', response.data.token)
-        setLoginStatus(true)
-      }
-    })
-  }
-
-  const handleLogin = () => {
-    history.push('/login')
-  }
+  const { user } = useAuth0()
 
   return (
     <>
-      {loginStatus ? (
-        <Button className='nav-btn' onClick={handleLogin}>
-          Log In
-        </Button>
+      {!isAuthenticated ? (
+        <>
+          {MainItems.map((item, index) => {
+            return (
+              <li key={index}>
+                <a className={item.cName} href={item.url}>
+                  {item.title}
+                </a>
+              </li>
+            )
+          })}
+          <Button
+            className='nav-btn'
+            onClick={() => {
+              loginWithRedirect()
+            }}
+          >
+            Log In
+          </Button>
+        </>
       ) : (
-        <Button>Log Out</Button>
+        <>
+          {user.email == 'ksbohorquezl@gmail.com'
+            ? MenuItems.map((item, index) => {
+                return (
+                  <li key={index}>
+                    <a className={item.cName} href={item.url}>
+                      {item.title}
+                    </a>
+                  </li>
+                )
+              })
+            : user.email == 'dantaliondec@gmail.com'
+            ? MenuItems2.map((item, index) => {
+                return (
+                  <li key={index}>
+                    <a className={item.cName} href={item.url}>
+                      {item.title}
+                    </a>
+                  </li>
+                )
+              })
+            : logout()}
+
+          <Button
+            className='nav-btn'
+            onClick={() => {
+              logout()
+            }}
+          >
+            Log Out
+          </Button>
+          {/* <img src={user.picture} alt={user.name} />
+          <h2>{user.name}</h2>
+          <p>{user.email}</p> */}
+        </>
       )}
     </>
   )
@@ -72,17 +102,8 @@ class Navbar extends Component {
           )}
         </div>
         <ul className={this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
-          {MenuItems.map((item, index) => {
-            return (
-              <li key={index}>
-                <a className={item.cName} href={item.url}>
-                  {item.title}
-                </a>
-              </li>
-            )
-          })}
+          <Log />
         </ul>
-        <LogBtn />
       </nav>
     )
   }
