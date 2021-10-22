@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react'
+import React, { Component } from 'react'
 import { MenuItems } from './MenuItems'
 import { MainItems } from './MainItems'
 import { MenuItems2 } from './MenuItems2'
@@ -39,7 +39,7 @@ export const Log = () => {
         </>
       ) : (
         <>
-          {user.email == 'ksbohorquezl@gmail.com'
+          {user.email == 'ksbohorquezl@gmail.com' && 'caicedoruize@gmail.com'
             ? MenuItems.map((item, index) => {
                 return (
                   <li key={index}>
@@ -61,7 +61,7 @@ export const Log = () => {
                   </li>
                 )
               })
-            : logout()}
+            : logout() || alert('No esta autenticado')}
 
           <Button
             className='nav-btn'
@@ -73,7 +73,7 @@ export const Log = () => {
           </Button>
           {/* <img src={user.picture} alt={user.name} />
           <h2>{user.name}</h2>
-          <p>{user.email}</p> */}
+          <p>{user.email}</p>  */}
         </>
       )}
     </>
