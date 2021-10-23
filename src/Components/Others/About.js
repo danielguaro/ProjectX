@@ -4,15 +4,17 @@ import { Footer } from '../Home/Footer/footer'
 const About = () => {
   return (
     <>
+    <header className='main_contact' > 
+        <h1 className = 'title_sd' style={{ fontFamily: 'serif' }}>SD Ascension</h1>
+      </header>
       <div class='main'>
-        <h1 style={{ fontFamily: 'serif' }}>SD Ascension</h1>
-        <h2 style={{ fontSize: 25, color: 'white', top: 50 }}>
-          <p>Group created for the administration of any kind of products.</p>
-          <p>
-            We come from Latin America and we offer any kind of service about
-            front end and back end development that you are looking for.
+          <p style={{ fontSize: 25, color: 'crimson', top: 50 }}>Group created in South America, and designed to sell many kind of products .</p>
+          <p style={{ fontSize: 25, color: 'crimson', top: 50 }}>
+          We are proud to say that we born in Colombia, and our public target has been growing after these five years of production, now we have distribution in ten countries, nine in south America and one in north America.
           </p>
-        </h2>
+          <p style={{ fontSize: 15, color: 'white', top: 50 }}>
+          We already have de ISO 9001:2015 and that shows our compromise with the clients.
+          </p>
       </div>
       <Footer/>
     </>
