@@ -21,13 +21,13 @@ const Sells = () => {
   const [modalState, setModalState] = useState(false)
 
   const getSells = () => {
-    Axios.get('http://localhost:3003/sell').then((res) => {
+    Axios.get('https://sdascension-server.herokuapp.com/sell').then((res) => {
       setSellList(res.data)
     })
   }
 
   const addSells = () => {
-    Axios.post('http://localhost:3003/sell', {
+    Axios.post('https://sdascension-server.herokuapp.com/sell', {
       totalValue: totalValue,
       idProduct: idProduct,
       quantity: quantity,

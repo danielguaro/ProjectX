@@ -175,14 +175,12 @@
   }
 
   .social_icons {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
     text-align: center;
     width: 100%;
-    margin-top: 0%;
-    margin-bottom: 0;
   }
 
   .footer-logo {
@@ -202,6 +200,12 @@
     margin-top: 10px;
     color: var(--clr-primary-3);
     font-size: 20px;
+  }
+
+  .social_icons ul li {
+    display: flex;
+    position: relative;
+    margin-bottom: -60px;
   }
 }
 

@@ -24,7 +24,7 @@ const Sells = () => {
   const [sellList, setSellList] = useState([])
 
   const getSells = () => {
-    Axios.get('http://localhost:3003/sell').then((res) => {
+    Axios.get('https://sdascension-server.herokuapp.com/sell').then((res) => {
       setSellList(res.data)
     })
   }
@@ -46,7 +46,7 @@ const Sells = () => {
   }
 
   const modifySell = () => {
-    Axios.put('http://localhost:3003/sell', {
+    Axios.put('https://sdascension-server.herokuapp.com/sell', {
       totalValue: editTotalValue,
       idProduct: editIdProduct,
       quantity: editQuantity,
@@ -79,13 +79,15 @@ const Sells = () => {
   }
 
   const deleteSell = () => {
-    Axios.delete(`http://localhost:3003/sell/${id}`).then((res) => {
-      setSellList(
-        sellList.filter((val) => {
-          return val.id != id
-        })
-      )
-    })
+    Axios.delete(`https://sdascension-server.herokuapp.com/sell/${id}`).then(
+      (res) => {
+        setSellList(
+          sellList.filter((val) => {
+            return val.id != id
+          })
+        )
+      }
+    )
     setModalDelete(false)
   }
 
