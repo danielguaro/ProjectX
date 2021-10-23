@@ -30,13 +30,10 @@
 
 @keyframes myColor {
   0% {
-    color: #ffff;
-  }
-  20% {
-    color: var(--clr-grey-9);
+    color: var(--clr-primary-4);
   }
   40% {
-    color: var(--clr-grey-7);
+    color: var(--clr-grey-5);
   }
   60% {
     color: var(--clr-primary-3);
@@ -45,18 +42,33 @@
     color: var(--clr-primary-4);
   }
   100% {
-    color: #ffff;
+    color: var(--clr-primary-1);
   }
+}
+header {
+  height: 15vh;
+}
+.title_sd{
+  animation: myColor;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+} 
+
+.back_main {
+  background: none;
+  display: flex;
+  height: 60vh;
 }
 
 .main h1 {
   text-align: center;
   color: rgb(255, 255, 255);
   font-size: 50px;
-  animation: myColor;
+  /* animation: myColor;
   animation-duration: 5s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: infinite; */
   margin-bottom: 5%;
+  
 }
 
 .main h2 p {
@@ -72,12 +84,6 @@
   font-size: 50px;
 }
 
-.title_sd{
-animation: myColor;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
-}
-
 .main_contact h3, p {
   display: flex;
   justify-content: center;
@@ -85,4 +91,13 @@ animation: myColor;
   align-items: center;
   position: relative;
   color: var(--clr-grey-9);
+}
+footer {
+  height: 25vh;
+}
+
+
+.footer-logo {
+  position: relative;
+  top: 30px;
 }
