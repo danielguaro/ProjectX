@@ -51,7 +51,7 @@ export const Log = () => {
               })
             : user.email == 'dantaliondec@gmail.com' &&
               'daniprogra91@gmail.com' &&
-              'Vdrey@misena.edu.co'
+              'vdrey@misena.edu.co'
             ? MenuItems2.map((item, index) => {
                 return (
                   <li key={index}>
