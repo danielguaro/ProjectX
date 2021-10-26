@@ -21,7 +21,7 @@ const Products = () => {
   const [id, setId] = useState(0)
 
   const modifyProduct = () => {
-    Axios.put('http://localhost:3003/product', {
+    Axios.put('https://sdascension-server.herokuapp.com/product', {
       productName: editProductName,
       description: editDescription,
       unitValue: editUnitValue,
@@ -46,20 +46,24 @@ const Products = () => {
   }
 
   const deleteProduct = () => {
-    Axios.delete(`http://localhost:3003/product/${id}`).then((res) => {
-      setProductList(
-        productList.filter((val) => {
-          return val.id != id
-        })
-      )
-    })
+    Axios.delete(`https://sdascension-server.herokuapp.com/product/${id}`).then(
+      (res) => {
+        setProductList(
+          productList.filter((val) => {
+            return val.id != id
+          })
+        )
+      }
+    )
     setModalDelete(false)
   }
 
   const getProducts = () => {
-    Axios.get('http://localhost:3003/product').then((res) => {
-      setProductList(res.data)
-    })
+    Axios.get('https://sdascension-server.herokuapp.com/product').then(
+      (res) => {
+        setProductList(res.data)
+      }
+    )
   }
 
   const closeModalEdit = () => {

@@ -17,7 +17,7 @@ const Products = () => {
   const [modalState, setModalState] = useState(false)
 
   const addProduct = () => {
-    Axios.post('http://localhost:3003/product', {
+    Axios.post('https://sdascension-server.herokuapp.com/product', {
       productName: productName,
       description: description,
       unitValue: unitValue,
@@ -38,9 +38,11 @@ const Products = () => {
   }
 
   const getProducts = () => {
-    Axios.get('http://localhost:3003/product').then((res) => {
-      setProductList(res.data)
-    })
+    Axios.get('https://sdascension-server.herokuapp.com/product').then(
+      (res) => {
+        setProductList(res.data)
+      }
+    )
   }
 
   const closeModal = () => {

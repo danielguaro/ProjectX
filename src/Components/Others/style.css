@@ -54,7 +54,7 @@ header {
   animation-iteration-count: infinite;
 } 
 
-main {
+.back_main {
   background: none;
   display: flex;
   height: 60vh;
@@ -84,8 +84,6 @@ main {
   font-size: 50px;
 }
 
-
-
 .main_contact h3, p {
   display: flex;
   justify-content: center;
@@ -97,6 +95,7 @@ main {
 footer {
   height: 25vh;
 }
+
 
 .footer-logo {
   position: relative;

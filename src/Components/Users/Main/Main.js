@@ -24,7 +24,7 @@ const Users = () => {
   const [userList, setUsersList] = useState([])
 
   const insertUsers = () => {
-    Axios.post('http://localhost:3003/user', {
+    Axios.post('https://sdascension-server.herokuapp.com/user', {
       name: name,
       rol: rol,
       userState: userState,
@@ -42,7 +42,7 @@ const Users = () => {
   }
 
   const modifyUsers = () => {
-    Axios.put('http://localhost:3003/user', {
+    Axios.put('https://sdascension-server.herokuapp.com/user', {
       name: editName,
       rol: editRol,
       userState: editUserState,
@@ -65,19 +65,21 @@ const Users = () => {
   }
 
   const deleteUsers = () => {
-    Axios.delete(`http://localhost:3003/user/${id}`).then((res) => {
-      setUsersList(
-        userList.filter((val) => {
-          return val.id != id
-        })
-      )
-    })
+    Axios.delete(`https://sdascension-server.herokuapp.com/user/${id}`).then(
+      (res) => {
+        setUsersList(
+          userList.filter((val) => {
+            return val.id != id
+          })
+        )
+      }
+    )
 
     setModalDelete(false)
   }
 
   const getUsers = () => {
-    Axios.get('http://localhost:3003/user').then((res) => {
+    Axios.get('https://sdascension-server.herokuapp.com/user').then((res) => {
       setUsersList(res.data)
     })
   }
