@@ -2,6 +2,8 @@
 ## npm install in server and in the react app to install all the modules from both
 ## project done by group sd ascension
 
+## REMEMBER, THE LINKS AND THE ROUTES IN THE APP ARE FOR THE ACTUAL APP IN HEROKU, IF U WANT ANY CHANGE U HAVE TO SET ALL OF THE LINKS FOR LOCALHOST
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
