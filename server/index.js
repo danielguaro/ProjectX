@@ -16,6 +16,6 @@ require('./Routes/userRoute')(app)
 
 app.listen(process.env.PORT || PORT,, () => {
   console.log(
-    `Listening SDAscension Database Service in http://localhost:${port}`
+    `Listening SDAscension Database Service in http://localhost:${PORT}`
   )
 })
