@@ -1,6 +1,6 @@
 module.exports = {
-  USER: 'root',
-  HOST: 'localhost',
-  PASSWORD: 'Ksbl2002.',
-  DATABASE: 'sdascension',
+  USER: 'sql10446384',
+  HOST: 'sql10.freesqldatabase.com',
+  PASSWORD: 'PMbnTBCF24',
+  DATABASE: 'sql10446384',
 }
